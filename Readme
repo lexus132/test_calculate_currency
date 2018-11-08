@@ -1,0 +1,15 @@
+run
+	docker-compose up
+
+watch
+	docker stats $(docker ps|grep -v "NAMES"|awk '{ print $NF }'|tr "\n" " ")
+
+	app
+		http://localhost
+
+
+Dell new image, network, volume
+	clear.sh
+
+Dell all
+	clear.sh -a

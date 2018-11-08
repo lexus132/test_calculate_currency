@@ -1,0 +1,15 @@
+version: "2"
+services:
+    lamp_www:
+        container_name: lamp_www
+        build: .
+        ports:
+            - "80:80"
+        volumes:
+            - ./000-default.conf:/etc/apache2/sites-available/000-default.conf
+            - ./www:/var/www/html/
+        networks:
+            - default
+
+volumes:
+  dbdata:

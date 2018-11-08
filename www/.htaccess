@@ -1,0 +1,21 @@
+Options +FollowSymlinks
+Options -Indexes
+
+#ErrorDocument 404 /error.html
+
+<FilesMatch "(?i)((\.tpl|\.ini|\.log|info.php|(?<!robots)\.txt))">
+    Require all denied
+</FilesMatch>
+
+RewriteEngine On
+RewriteBase /
+#RewriteRule ^sitemap.xml$ index.php?route=extension/feed/google_sitemap [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !.*\.(ico|gif|jpg|jpeg|png|js|css|txt)
+RewriteRule ^([^?]*) index.php?_route_=$1 [L,QSA]
+
+php_flag display_startup_errors on
+php_flag display_errors on
+php_flag html_errors on
+php_flag track_errors on
