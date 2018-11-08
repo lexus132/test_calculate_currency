@@ -1,7 +1,5 @@
 <?php
 
-use Routing;
-
 final class App
 {
     public $controller = 'SiteController';
@@ -56,7 +54,7 @@ final class App
                 $this->{$key} = $val;
             }
 
-            $this->initModels();
+//            $this->initModels();
 
             $this->routing();
 

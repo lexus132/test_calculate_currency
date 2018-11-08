@@ -1,7 +1,6 @@
 <?php
 
 spl_autoload_register(function ($class) {
-//    var_dump($class);
 
     if(file_exists(dirname(__FILE__) . "/$class.php"))
         require_once dirname(__FILE__) . "/$class.php";
@@ -41,15 +40,7 @@ function MyErro($no, $msg, $file, $line){
 define('APP_BASE_PATH',dirname(__FILE__));
 
 
-//require_once APP_BASE_PATH . '/App.php';
-//require_once APP_BASE_PATH . '/class/ErroeNer.php';
-//require_once APP_BASE_PATH . '/class/Controller.php';
-//require_once APP_BASE_PATH . '/controllers/SiteController.php';
-//require_once APP_BASE_PATH . '/class/Routing.php';
-//require_once APP_BASE_PATH . '/class/Request.php';
-//require_once APP_BASE_PATH . '/class/Session.php';
-
-require APP_BASE_PATH .'/Model/ActiveRecord.php';
+//require APP_BASE_PATH .'/Model/ActiveRecord.php';
 
 
 $config = [

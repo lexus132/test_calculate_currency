@@ -1,7 +1,5 @@
 <?php
 
-use ErroeNer;
-
 class Routing
 {
     public $controllerPath;

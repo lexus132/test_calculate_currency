@@ -1,9 +1,6 @@
 <?php
 
 use Jenssegers\Blade\Blade;
-use ActiveRecord;
-use Request;
-use Session;
 
 class Controller
 {
@@ -37,16 +34,16 @@ class Controller
             }
         }
 
-        ActiveRecord\Config::initialize(function($cfg)
-        {
-            $cfg->set_model_directories( array( APP_BASE_PATH.'/Model' ) );
-            $cfg->set_connections( array( 'development' => 'mysql://'.DB_USER.':'.DB_PASSWORD.'@'.DB_HOST.'/'.DB_NAME.'?charset=utf8' ) );
-        });
+//        ActiveRecord\Config::initialize(function($cfg)
+//        {
+//            $cfg->set_model_directories( array( APP_BASE_PATH.'/Model' ) );
+//            $cfg->set_connections( array( 'development' => 'mysql://'.DB_USER.':'.DB_PASSWORD.'@'.DB_HOST.'/'.DB_NAME.'?charset=utf8' ) );
+//        });
 
         $this->request = new Request();
         if(!empty($this->request->get['_route_']))
             unset($this->request->get['_route_']);
-        $this->session = new Session();
+//        $this->session = new Session();
 
         if(!empty($this->session->user_id)){
             $user = User::find((int)$this->session->user_id);

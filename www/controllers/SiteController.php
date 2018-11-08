@@ -1,10 +1,5 @@
 <?php
 
-use Controller;
-use CurrencyList;
-
-use BankuaCurrency;
-
 class SiteController extends Controller
 {
 
@@ -28,16 +23,8 @@ class SiteController extends Controller
         $this->json($data);
     }
 
-    public function Test(){
-
-        $privat = new BankuaCurrency();
-
-
-
-        header('Content-Type: text/html; charset=utf-8');
-        echo '<pre>';
-        print_r($privat->getDate());
-        exit;
-    }
+//    public function Test(){
+//
+//    }
 
 }

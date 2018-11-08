@@ -1,7 +1,5 @@
 <?php
 
-use BaseCurrency;
-
 class InstaforexCurrency extends BaseCurrency
 {
 

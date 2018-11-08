@@ -1,7 +1,5 @@
 <?php
 
-use BaseCurrency;
-
 class EcbeuropaCurrency extends BaseCurrency
 {
 

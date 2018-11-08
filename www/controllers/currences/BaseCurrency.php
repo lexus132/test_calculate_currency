@@ -11,7 +11,7 @@ abstract class BaseCurrency
         $url = $this->baseUrl;
         $curl = curl_init($url);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($curl, CURLOPT_HTTPHEADER);
+//        curl_setopt($curl, CURLOPT_HTTPHEADER);
 
         curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "GET");
         $response = curl_exec($curl);

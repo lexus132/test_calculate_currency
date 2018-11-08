@@ -1,7 +1,5 @@
 <?php
 
-use BaseCurrency;
-
 class BankuaCurrency extends BaseCurrency
 {
 

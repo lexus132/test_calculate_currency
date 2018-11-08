@@ -1,10 +1,5 @@
 <?php
 
-use PrivatbankCurrency;
-use BankuaCurrency;
-use EcbeuropaCurrency;
-use InstaforexCurrency;
-
 class CurrencyList
 {
     public static function getList(){
